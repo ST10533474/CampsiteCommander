@@ -47,6 +47,11 @@ Tap "Back to Add Gear" → Returns to main screen
 Close/reopen app → Gear list persists 
 
 Screenshots 
+Main Activity - Add Gear Screen
+![Main Screen Splash](app/src/main/res/screenshots/mainscreensplash.png)
+
+### Detail Activity - Packing List with Swipe Delete
+![Packing List](app/src/main/res/screenshots/packinglist.png)
 
 Add your app screenshots here after running: 
 
