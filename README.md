@@ -57,16 +57,3 @@ Author
 
 Nelly Mgijima ST10533474 
 
-CampsiteCommander v1.0 - April 2026 
-
-Future Improvements 
-
-Swipe to delete individual items 
-
-Edit gear details 
-
-Sort by category 
-
-Export list to PDF/CSV 
-
- 
