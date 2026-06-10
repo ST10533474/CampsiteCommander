@@ -57,7 +57,7 @@ class DetailActivity : AppCompatActivity() {
             gearList.removeAt(position)
             gearAdapter.notifyItemRemoved(position)
 
-            Snackbar.make(recyclerViewGear, "Deleted", Snackbar.LENGTH_LONG)
+            Snackbar.make(recyclerViewGear, "Deleted: $deletedItem", Snackbar.LENGTH_LONG)
                 .setAction("UNDO") {
                     gearList.add(position, deletedItem)
                     gearAdapter.notifyItemInserted(position)
