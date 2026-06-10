@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Link views
+        // Link views - IDs must match activity_main.xml
         etGearName = findViewById(R.id.etGearName)
         etCategory = findViewById(R.id.etCategory)
         etQuantity = findViewById(R.id.etQuantity)
@@ -41,13 +41,14 @@ class MainActivity : AppCompatActivity() {
         // Setup SharedPreferences
         sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
         loadGearList()
+        updateGearCount()
 
         // Add gear button
         btnAddGear.setOnClickListener {
-            val name = etGearName.text.toString()
-            val category = etCategory.text.toString()
-            val quantity = etQuantity.text.toString()
-            val comments = etComments.text.toString()
+            val name = etGearName.text.toString().trim()
+            val category = etCategory.text.toString().trim()
+            val quantity = etQuantity.text.toString().trim()
+            val comments = etComments.text.toString().trim()
 
             if (name.isNotEmpty() && category.isNotEmpty() && quantity.isNotEmpty()) {
                 val gearItem = "Name: $name | Category: $category | Qty: $quantity | Notes: $comments"

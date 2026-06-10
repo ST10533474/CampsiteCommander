@@ -22,7 +22,7 @@ class DetailActivity : AppCompatActivity() {
         recyclerViewGear = findViewById(R.id.recyclerViewGear)
         btnBack = findViewById(R.id.btnBack)
 
-        gearList = intent.getStringArrayListExtra("GEAR_LIST") ?: ArrayList()
+        gearList = intent.getStringArrayListExtra("GEAR_LIST")?: ArrayList()
 
         gearAdapter = GearAdapter(gearList)
         recyclerViewGear.layoutManager = LinearLayoutManager(this)
@@ -39,7 +39,6 @@ class DetailActivity : AppCompatActivity() {
             finish()
         }
 
-        // Swipe to delete setup
         val itemTouchHelper = ItemTouchHelper(swipeCallback)
         itemTouchHelper.attachToRecyclerView(recyclerViewGear)
     }
@@ -58,7 +57,7 @@ class DetailActivity : AppCompatActivity() {
             gearList.removeAt(position)
             gearAdapter.notifyItemRemoved(position)
 
-            Snackbar.make(recyclerViewGear, "Deleted: $deletedItem", Snackbar.LENGTH_LONG)
+            Snackbar.make(recyclerViewGear, "Deleted", Snackbar.LENGTH_LONG)
                 .setAction("UNDO") {
                     gearList.add(position, deletedItem)
                     gearAdapter.notifyItemInserted(position)

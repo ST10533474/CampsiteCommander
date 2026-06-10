@@ -1,90 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#121212"
-    android:padding="24dp">
+    android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Camping Gear"
-        android:textColor="#FFFFFF"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="32dp" />
-
-    <EditText
-        android:id="@+id/etGearName"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Gear Name"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#B0B0B0"
-        android:layout_marginBottom="16dp" />
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/etCategory"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Category"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#B0B0B0"
-        android:layout_marginBottom="16dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Camping Gear"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
 
-    <EditText
-        android:id="@+id/etQuantity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Quantity"
-        android:inputType="number"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#B0B0B0"
-        android:layout_marginBottom="16dp" />
+        <EditText
+            android:id="@+id/etGearName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Gear Name"
+            android:layout_marginBottom="8dp" />
 
-    <EditText
-        android:id="@+id/etComments"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Comments"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#B0B0B0"
-        android:layout_marginBottom="24dp" />
+        <EditText
+            android:id="@+id/etCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Category"
+            android:layout_marginBottom="8dp" />
 
-    <Button
-        android:id="@+id/btnAdd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ADD GEAR"
-        android:backgroundTint="#4CAF50"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="12dp" />
+        <EditText
+            android:id="@+id/etQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Quantity"
+            android:inputType="number"
+            android:layout_marginBottom="8dp" />
 
-    <Button
-        android:id="@+id/btnViewList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="VIEW PACKED LIST"
-        android:backgroundTint="#2196F3"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="16dp" />
+        <EditText
+            android:id="@+id/etComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Comments"
+            android:layout_marginBottom="16dp" />
 
-    <Button
-        android:id="@+id/btnClearAll"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CLEAR ALL GEAR"
-        android:backgroundTint="#D32F2F"
-        android:textColor="#FFFFFF"
-        android:layout_marginTop="8dp" />
+        <Button
+            android:id="@+id/btnAddGear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Gear"
+            android:layout_marginBottom="8dp" />
 
-    <TextView
-        android:id="@+id/txtTotal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Total Items Packed: 0"
-        android:textColor="#4CAF50"
-        android:textSize="18sp" />
-</LinearLayout>
+        <TextView
+            android:id="@+id/tvGearCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Items Packed: 0"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnViewPacked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VIEW PACKED LIST" />
+
+    </LinearLayout>
+</ScrollView>

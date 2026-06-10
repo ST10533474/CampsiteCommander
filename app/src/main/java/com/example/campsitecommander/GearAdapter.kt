@@ -9,13 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 class GearAdapter(private val gearList: ArrayList<String>) :
     RecyclerView.Adapter<GearAdapter.GearViewHolder>() {
 
-    inner class GearViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class GearViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvGearItem: TextView = itemView.findViewById(R.id.tvGearItem)
-    }
-    // Add this inside GearAdapter class, below onBindViewHolder
-    fun removeItem(position: Int) {
-        gearList.removeAt(position)
-        notifyItemRemoved(position)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GearViewHolder {
@@ -29,4 +24,9 @@ class GearAdapter(private val gearList: ArrayList<String>) :
     }
 
     override fun getItemCount(): Int = gearList.size
+
+    fun removeItem(position: Int) {
+        gearList.removeAt(position)
+        notifyItemRemoved(position)
+    }
 }
